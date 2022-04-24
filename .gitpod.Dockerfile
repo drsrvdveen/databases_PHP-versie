@@ -15,3 +15,14 @@ COPY mysql.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 
 # Install default-login for MySQL clients
 COPY client.cnf /etc/mysql/mysql.conf.d/client.cnf
+
+# Install phpMyAdmin
+RUN mkdir public -p \
+ && cd public \
+ && git clone https://github.com/phpmyadmin/phpmyadmin.git --depth 1 --branch STABLE \
+ && cd phpmyadmin \
+ && yarn install
+
+# Install phpMyAdmin config
+COPY config.inc.php ./public/phpmyadmin/config.inc.php
+ 
