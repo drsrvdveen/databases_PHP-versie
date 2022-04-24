@@ -1,0 +1,67 @@
+body {
+  background-color: #0A0A0A;
+  padding: 0;
+  margin: 0;
+  font-size: 125%;
+}
+
+h1 {
+  color: #0A0A0A;
+  font-weight: 500;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: steelblue;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #ff3300;
+}
+
+#PHPoutput,#opdracht,#code {
+  width: 80%;
+  padding: 10px 20px;
+  margin-left: 10%;
+  font-family: Courier,serif;  
+}
+
+#PHPoutput,#code {
+  background-color: whitesmoke;
+  height: auto;
+  min-height: 50%;
+  margin-top: 5%;
+  font-family: Courier,serif;
+}
+
+#opdracht {
+  background-color: #ff3300;
+  height: 10%;  
+  margin-top: 0%;
+  font-family: Arial,sans;
+  font-size: 2em;
+  text-align: center;
+}
+
+#code {
+  background-color: #DDD;
+  margin-top: 0%;
+  font-family: monospace;
+  font-size: 1.25em;
+}
+
+.menu,a {
+  color: steelblue;
+  font-family: Arial,sans;
+  font-weight: bold;
+  font-size: 1.75em;
+  text-decoration: none;
+}
+.menu {
+  color: olivedrab;
+  background-color: seashell;
+}
