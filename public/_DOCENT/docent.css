@@ -19,6 +19,16 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  color: indianred;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+h4 {
+  display: inline;
+}
+
 a:hover {
   color: #ff3300;
 }
