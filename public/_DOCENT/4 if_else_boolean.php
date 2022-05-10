@@ -11,7 +11,7 @@ echo '<p>We kennen if && else al van de lessen Javascript. Let wel goed op de sy
 
 $cijferLijst = [7.3,4.5,9.0,5.5,4.9,10];
 
-echo '<h2>voorwaardelijke opmaak door gebruik te maken van een if</h2>';
+echo '<h2>voorwaardelijke opmaak door gebruik te maken van een if [foreach]</h2>';
 foreach ($cijferLijst as $cijfer) {
     $kleur = 'black';
     if ($cijfer < 5.5) {
@@ -20,20 +20,17 @@ foreach ($cijferLijst as $cijfer) {
     echo '<h4 style="color: '.$kleur.';">'.$cijfer.'</h4> | ';
 }
 
-echo '<h2><i>finetuning</i> tweede variant met een if-else && en if</h2>';
-foreach ($cijferLijst as $cijfer) {
-    if ($cijfer < 5.5) {
-        $kleur = 'red';
-    }
-    else {
-        $kleur = 'black';
-    }
-    echo '<h4 style="color: '.$kleur.';">'.$cijfer.'</h4>';
-    if (next($cijferLijst) == true) { // deze regel laat duidelijker zien hoe het werkt
-    // if (next($cijferLijst)) { // deze regel laat zien dat de toevoeging == true (of false) niet hoeft
-        echo ' | ';
-    }
+echo '<h2>wanneer gebruik je while (en niet if)?</h2>';
+echo '<p>Antwoord: als je wil doorgaan tot (/ stoppen na) een aantal herhalingen dat vooraf onbekend is.</p>';
+
+$aantal = 0;
+$totaal = 0;
+while ($totaal < 25) {
+    $totaal+= $cijferLijst[$aantal];
+    $aantal++;
+    echo "tussenstand: het totaal is $totaal na $aantal cijfer(-s).<br>";
 }
+
 
 echo '<h2>Toegang beheren op basis van booleans</h2>';
 $authenticatie = false; // er is (n-)iemand ingelogd

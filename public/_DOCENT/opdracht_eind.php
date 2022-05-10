@@ -10,7 +10,6 @@
     $file = explode('/',$titel);
     $source = show_source($file[1], true);
     $sourceParts = explode('****************************',$source);
-    //print_r($sourceParts);
     print $sourceParts[2];
     ?>
     </div>

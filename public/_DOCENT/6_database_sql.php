@@ -15,12 +15,17 @@ $pass = '';
 $db = 'postcode';
 $con = mysqli_connect($server, $user, $pass, $db);
 
+if ($con) {
+    echo '<h3>Connectie succesvol!</h3>';
+}
+
 echo '<h2>Als de verbinding is gelegd kun je een query uitvoeren.</h2>';
 $sql = "SELECT DISTINCT plaats,gemeente FROM postcode WHERE Pcnum = 9801";
 $records = mysqli_query($con,$sql);
 // Haal alle rijen op en zet ze om in een associatieve array
 $straten = mysqli_fetch_all($records,MYSQLI_ASSOC);
 
+// $straten_num = mysqli_fetch_all($records,MYSQLI_NUM);
 echo '<pre>';
 print_r($straten);
 echo '<pre>';

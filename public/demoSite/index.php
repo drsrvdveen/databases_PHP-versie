@@ -20,8 +20,10 @@ $fotoData = mysqli_fetch_assoc($record);
 $sql = "SELECT id,naam FROM accounts";
 $records = mysqli_query($DBverbinding, $sql);
 $namen = [];
-if (mysqli_num_rows($records) > 0) {
+if (mysqli_num_rows($records) > 0) { // check of de query wel resultaten oplevert
     while($naam = mysqli_fetch_assoc($records)) {
+        // zolang er nog een volgend resultaat is, worden deze
+        // één voor één (per record) als associatieve array opgehaald.
         $namen[$naam['id']] = utf8_decode($naam['naam']);
     }
 }
