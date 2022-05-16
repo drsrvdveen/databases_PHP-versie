@@ -21,6 +21,7 @@ function inleiding() {
 echo '<h2>voorbeeld van een functie die een opdracht uitvoert op basis van invoer.</h2>';
 
 $cijferLijst = [7.3,4.5,9.0,5.5,4.9,10];
+$nogEenLijst = [10,9.9,9.7];
 // aanroepen van de functie
 geefCijferOverzicht($cijferLijst);
 
